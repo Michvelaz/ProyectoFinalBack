@@ -1,0 +1,11 @@
+<h1>Lista de Libros</h1>
+<form method="GET">
+    <input type="text" name="q" placeholder="Buscar libros">
+    <button type="submit">Buscar</button>
+</form>
+<ul>
+    {% for libro in libros %}
+        <li>{{ libro.titulo }} - {{ libro.autor }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'agregar_libro' %}">Agregar Libro</a>

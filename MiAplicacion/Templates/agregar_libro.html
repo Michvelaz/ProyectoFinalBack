@@ -1,0 +1,10 @@
+<h1>Agregar Nuevo Libro</h1>
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="titulo" placeholder="Título" required>
+    <input type="text" name="autor" placeholder="Autor" required>
+    <input type="date" name="publicacion" required>
+    <input type="text" name="genero" placeholder="Género" required>
+    <button type="submit">Agregar</button>
+</form>
+<a href="{% url 'lista_libros' %}">Volver</a>
